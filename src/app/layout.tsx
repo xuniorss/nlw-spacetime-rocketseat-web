@@ -1,7 +1,5 @@
-import {
-   Bai_Jamjuree as BaiJamjuree,
-   Roboto_Flex as Roboto,
-} from 'next/font/google'
+import { LeftPage } from '@/components/LeftPage'
+import { Bai_Jamjuree as BaiJamjuree, Roboto_Flex as Roboto } from 'next/font/google'
 import { ReactNode } from 'react'
 
 import './globals.css'
@@ -23,9 +21,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
    return (
       <html lang="pt-br">
          <body
-            className={`${roboto.variable} ${baiJamjuree.variable} font-sans bg-gray-900 text-gray-100`}
+            className={`${roboto.variable} ${baiJamjuree.variable} bg-gray-900 font-sans text-gray-100`}
          >
-            {children}
+            <LeftPage>{children}</LeftPage>
          </body>
       </html>
    )
